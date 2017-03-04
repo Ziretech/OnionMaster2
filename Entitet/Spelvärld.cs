@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entitet
+{
+    public class Spelvärld
+    {
+        List<Objekt> _objektlista;
+
+        public Spelvärld()
+        {
+            _objektlista = new List<Objekt>();
+        }
+
+        public void LäggTill(Objekt objekt)
+        {
+            _objektlista.Add(objekt);
+        }
+
+        public int AntalObjekt()
+        {
+            return _objektlista.Count;
+        }
+
+        public IEnumerable<Objekt> HämtaObjekt(Func<Objekt, bool> filterfunktion)
+        {
+            return _objektlista.Where(filterfunktion);
+        }
+    }
+}

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RegelTest
+namespace Entitet
 {
-    public class Class1
+    public class Objekt
     {
+        public Bild Bild { get; set; }
+        public Position Position { get; set; }
     }
 }

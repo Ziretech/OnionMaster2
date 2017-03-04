@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entitet
+namespace Konfiguration
 {
-    public class Class1
+    public class Applikation
     {
+        static void Main(string[] args)
+        {
+            
+        }
     }
 }

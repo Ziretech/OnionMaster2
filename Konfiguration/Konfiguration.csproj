@@ -35,6 +35,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Adapter\Adapter.csproj">
+      <Project>{4ff1ca90-c37f-4e92-aeee-d163826773ae}</Project>
+      <Name>Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entitet\Entitet.csproj">
+      <Project>{7e690a35-f417-4193-bf71-0816c29c0c9e}</Project>
+      <Name>Entitet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Regel\Regel.csproj">
+      <Project>{c89ff6e1-197e-43f4-8075-333b6697644d}</Project>
+      <Name>Regel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Applikation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
