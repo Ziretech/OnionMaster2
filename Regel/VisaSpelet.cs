@@ -14,7 +14,16 @@ namespace Regel
 
         public VisaSpelet(IRitare ritare, Spelvärld spelvärld)
         {
+            if(ritare == null)
+            {
+                throw new UndantagFörNull("Ritare får inte vara null.");
+            }
             _ritare = ritare;
+
+            if (spelvärld == null)
+            {
+                throw new UndantagFörNull("Spelvärld får inte vara null.");
+            }
             _spelvärld = spelvärld;
         }
 
