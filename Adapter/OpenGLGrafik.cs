@@ -8,6 +8,7 @@ using System.Drawing;
 using OpenTK;
 using System.Drawing.Imaging;
 using PixelFormat = OpenTK.Graphics.OpenGL.PixelFormat;
+using Regel;
 
 namespace Adapter
 {

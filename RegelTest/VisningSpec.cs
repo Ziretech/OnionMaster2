@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,15 @@ namespace Regel
         {
             var visning = new Visning(1, 2, 3, 4, 5, 6, 7);
             Assert.That(visning.ToString(), Is.EqualTo("1 2 3 4 5 6 7"));
+        }
+
+        [Test]
+        public void Visning_borde_kopiera_bild_till_skärmen()
+        {
+            var ritareMock = new Mock<IRitare>();
+            var visning = new Visning(11, 12, 13, 14, 15, 16, 17);
+            visning.Visa(ritareMock.Object);
+            ritareMock.Verify(ritare => ritare.KopieraBildTillSkärmen(11, 12, 14, 15, 16, 17));
         }
     }
 }

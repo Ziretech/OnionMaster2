@@ -40,8 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IRegelFabrik.cs" />
+    <Compile Include="IRitare.cs" />
+    <Compile Include="IVisaSpelet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegelFabrik.cs" />
+    <Compile Include="UndantagFörNull.cs" />
     <Compile Include="VisaBilder.cs" />
+    <Compile Include="VisaSpelet.cs" />
     <Compile Include="Visning.cs" />
     <Compile Include="Visningar.cs" />
   </ItemGroup>

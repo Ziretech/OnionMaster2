@@ -58,6 +58,11 @@ namespace Regel
             return hash;
         }
 
+        public void Visa(IRitare ritare)
+        {
+            ritare.KopieraBildTillSkärmen(_skärmX, _skärmY, _bildmängdX, _bildmängdY, _bredd, _höjd);
+        }
+
         public override string ToString()
         {
             return $"{_skärmX} {_skärmY} {_skärmLager} {_bildmängdX} {_bildmängdY} {_bredd} {_höjd}";

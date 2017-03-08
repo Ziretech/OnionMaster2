@@ -1,5 +1,6 @@
 ﻿using Adapter;
 using OpenTK;
+using Regel;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -13,7 +14,8 @@ namespace Konfiguration
     {
         static void Main(string[] args)
         {
-            Spelfönster fönster = new Spelfönster(new GameWindow(), new OpenGLGrafik(), new Bitmap("c:/temp/tiles.png"));
+            var grafik = new OpenGLGrafik();
+            Spelfönster fönster = new Spelfönster(new GameWindow(), grafik, new Bitmap("c:/temp/tiles.png"), new RegelFabrik());
             fönster.Öppna();
         }
     }

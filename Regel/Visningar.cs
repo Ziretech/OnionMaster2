@@ -27,7 +27,19 @@ namespace Regel
 
         public void LäggTill(Visning visning)
         {
+            if(visning == null)
+            {
+                throw new UndantagFörNull("Visning måste vara definierad när det läggs till visningar.");
+            }
             _visningar.Add(visning);
+        }
+
+        public void Visa(IRitare ritare)
+        {
+            foreach(var visning in _visningar)
+            {
+                visning.Visa(ritare);
+            }
         }
     }
 }

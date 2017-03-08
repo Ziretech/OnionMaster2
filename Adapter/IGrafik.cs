@@ -9,6 +9,6 @@ namespace Adapter
         void KopieraTexturrektangelTillRityta(int texturX, int texturY, int ritytaX, int ritytaY, int bredd, int höjd);
         int LaddaTextur(Bitmap bitmap);
         void TömRityta();
-        void ÄndraStorlek(int width, int height);
+        void ÄndraStorlek(int width, int height);        
     }
 }
