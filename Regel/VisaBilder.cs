@@ -13,6 +13,10 @@ namespace Regel
 
         public VisaBilder(Spelvärld spelvärld)
         {
+            if(spelvärld == null)
+            {
+                throw new UndantagFörNull("Spelvärld får inte vara null.");
+            }
             _bilder = spelvärld.HämtaObjekt(BildVäljare);
         }
 

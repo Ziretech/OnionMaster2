@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegelFabrikSpec.cs" />
     <Compile Include="VisaBilderSpec.cs" />
     <Compile Include="VisaSpeletSpec.cs" />
     <Compile Include="VisningarSpec.cs" />

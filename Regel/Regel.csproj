@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IRegelFabrik.cs" />
-    <Compile Include="IRitare.cs" />
-    <Compile Include="IVisaSpelet.cs" />
+    <Compile Include="Ingång\IRegelFabrik.cs" />
+    <Compile Include="Utgång\IRitare.cs" />
+    <Compile Include="Ingång\IVisaSpelet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegelFabrik.cs" />
     <Compile Include="UndantagFörNull.cs" />
@@ -57,6 +57,7 @@
       <Name>Entitet</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

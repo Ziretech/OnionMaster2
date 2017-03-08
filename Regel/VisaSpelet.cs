@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entitet;
+using Regel.Ingång;
+using Regel.Utgång;
 
 namespace Regel
 {

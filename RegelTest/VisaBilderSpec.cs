@@ -53,5 +53,19 @@ namespace Regel
             Visningar visningar = new VisaBilder(spelvärld).HämtaVisningar();
             Assert.That(visningar.AntalVisningar(), Is.EqualTo(1000));
         }
+
+        [Test]
+        public void VisaBilder_borde_göra_undantag_för_när_det_inte_finns_någon_spelvärld()
+        {
+            try
+            {
+                new VisaBilder(null);
+                Assert.Fail("Inget undantag gjordes.");
+            }
+            catch(UndantagFörNull undantag)
+            {
+                Assert.That(undantag.Message.ToLower(), Does.Contain("spelvärld"));
+            }
+        }
     }
 }

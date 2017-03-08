@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Regel
+namespace Regel.Utgång
 {
     public interface IRitare
     {

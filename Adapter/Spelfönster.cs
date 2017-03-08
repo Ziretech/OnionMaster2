@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Drawing;
 using Entitet;
 using Regel;
+using Regel.Utgång;
+using Regel.Ingång;
 
 namespace Adapter
 {
