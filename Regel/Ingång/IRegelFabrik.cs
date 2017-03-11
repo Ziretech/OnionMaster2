@@ -10,6 +10,6 @@ namespace Regel.Ingång
 {
     public interface IRegelFabrik
     {
-        IVisaSpelet SkapaVisaSpelet(IRitare ritare, Spelvärld spelvärld);
+        IVisaSpelet SkapaVisaSpelet(IRitare ritare, ISpelvärld spelvärld);
     }
 }

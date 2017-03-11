@@ -11,7 +11,7 @@ namespace Regel
 {
     public class RegelFabrik : IRegelFabrik
     {
-        public IVisaSpelet SkapaVisaSpelet(IRitare ritare, Spelvärld spelvärld)
+        public IVisaSpelet SkapaVisaSpelet(IRitare ritare, ISpelvärld spelvärld)
         {
             return new VisaSpelet(ritare, spelvärld);
         }

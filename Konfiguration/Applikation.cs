@@ -1,4 +1,5 @@
 ﻿using Adapter;
+using Entitet;
 using OpenTK;
 using Regel;
 using System;
@@ -15,7 +16,9 @@ namespace Konfiguration
         static void Main(string[] args)
         {
             var grafik = new OpenGLGrafik();
-            Spelfönster fönster = new Spelfönster(new GameWindow(), grafik, new Bitmap("c:/temp/tiles.png"), new RegelFabrik());
+            var spelvärld = new Spelvärld();
+            spelvärld.LäggTill(new Objekt { Position = new Position(50, 50, 0), Bild = new Bild(new Bildmängdskoordinat(0, 0), new Bildstorlek(32, 32)) });
+            Spelfönster fönster = new Spelfönster(new GameWindow(), grafik, new Bitmap("c:/temp/tiles.png"), new RegelFabrik(), spelvärld);
             fönster.Öppna();
         }
     }

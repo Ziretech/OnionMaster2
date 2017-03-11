@@ -19,16 +19,17 @@ namespace Adapter
         private readonly IGrafik _grafik;
         private readonly IRitare _ritare;
         private readonly Bitmap _textur;
-        private readonly Spelvärld _spelvärld;
+        private readonly ISpelvärld _spelvärld;
         private readonly IRegelFabrik _regelfabrik;
 
-        public Spelfönster(GameWindow gameWindow, IGrafik grafik, Bitmap textur, IRegelFabrik regelfabrik)
+        public Spelfönster(GameWindow gameWindow, IGrafik grafik, Bitmap textur, IRegelFabrik regelfabrik, ISpelvärld spelvärld)
         {
             _gameWindow = gameWindow;
             _grafik = grafik;
             _textur = textur;
             _ritare = new Ritare(_grafik);
             _regelfabrik = regelfabrik;
+            _spelvärld = spelvärld;
 
             _gameWindow.Load += Ladda;
             _gameWindow.Resize += ÄndraStorlek;
@@ -36,9 +37,6 @@ namespace Adapter
             _gameWindow.RenderFrame += Visa;
 
             _uppdateringarISekunden = 30.0;
-
-            _spelvärld = new Spelvärld();
-            _spelvärld.LäggTill(new Objekt { Position = new Position(50, 50, 0), Bild = new Bild(new Bildmängdskoordinat(0, 0), new Bildstorlek(32, 32)) });
         }
 
         public void Öppna()

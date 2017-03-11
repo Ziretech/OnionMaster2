@@ -11,7 +11,7 @@ namespace Regel
     {
         private IEnumerable<Objekt> _bilder;
 
-        public VisaBilder(Spelvärld spelvärld)
+        public VisaBilder(ISpelvärld spelvärld)
         {
             if(spelvärld == null)
             {

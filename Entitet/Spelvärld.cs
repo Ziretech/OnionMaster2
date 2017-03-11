@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entitet
 {
-    public class Spelvärld
+    public class Spelvärld : ISpelvärld
     {
         List<Objekt> _objektlista;
 

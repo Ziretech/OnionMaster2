@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Adapter
 {
-    class Ritare : IRitare
+    public class Ritare : IRitare
     {
         private readonly IGrafik _grafik;
 

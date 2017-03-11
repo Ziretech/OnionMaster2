@@ -11,10 +11,10 @@ namespace Regel
 {
     class VisaSpelet : IVisaSpelet
     {
-        private readonly Spelvärld _spelvärld;
+        private readonly ISpelvärld _spelvärld;
         private readonly IRitare _ritare;
 
-        public VisaSpelet(IRitare ritare, Spelvärld spelvärld)
+        public VisaSpelet(IRitare ritare, ISpelvärld spelvärld)
         {
             if(ritare == null)
             {
