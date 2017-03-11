@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Regel
 {
     [TestFixture]
-    public class RegelFabrikSpec
+    public class RegelFabrikBeskrivning
     {
         [Test]
         public void RegelFabrik_borde_skapa_VisaSpelet()

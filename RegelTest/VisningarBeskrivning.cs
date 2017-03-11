@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Regel
 {
     [TestFixture]
-    public class VisningarSpec
+    public class VisningarBeskrivning
     {
         [Test]
         public void Visningar_borde_inte_visa_när_det_inte_finns_visningar()

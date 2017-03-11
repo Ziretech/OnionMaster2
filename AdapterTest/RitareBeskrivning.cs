@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Adapter
 {
     [TestFixture]
-    public class RitareSpec
+    public class RitareBeskrivning
     {
         [Test]
         public void Ritare_borde_kopiera_bild_till_skärmen()

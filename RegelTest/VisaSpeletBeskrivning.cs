@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Regel
 {
     [TestFixture]
-    public class VisaSpeletSpec
+    public class VisaSpeletBeskrivning
     {
         [Test]
         public void VisaSpelet_borde_inte_visa_någonting_när_spelvärlden_är_tom()

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Regel
 {
     [TestFixture]
-    public class VisningSpec
+    public class VisningBeskrivning
     {
         [Test]
         public void Visning_borde_tycka_att_två_likadana_visningar_är_likvärdiga()

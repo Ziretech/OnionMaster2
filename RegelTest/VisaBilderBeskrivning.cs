@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Regel
 {
     [TestFixture]
-    public class VisaBilderSpec
+    public class VisaBilderBeskrivning
     {
         [Test]
         public void VisaBilder_borde_inte_generera_visning_för_spelvärld_utan_bilder()

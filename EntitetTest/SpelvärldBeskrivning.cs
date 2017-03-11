@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Entitet
 {
     [TestFixture]
-    public class SpelvärldSpec
+    public class SpelvärldBeskrivning
     {
         private Spelvärld _spelvärld;
 

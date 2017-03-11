@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RitareSpec.cs" />
+    <Compile Include="RitareBeskrivning.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Adapter\Adapter.csproj">
