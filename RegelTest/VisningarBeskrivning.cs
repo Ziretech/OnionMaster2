@@ -44,18 +44,17 @@ namespace Regel
         }
 
         [Test]
-        public void Visningar_borde_göra_undantag_om_null_läggs_till()
+        public void Visningar_borde_visa_lägre_lager_först()
         {
-            var visningar = new Visningar();
-            try
-            {
-                visningar.LäggTill(null);
-                Assert.Fail("Inget undantag gjordes.");
-            }
-            catch(UndantagFörNull undantag)
-            {
-                Assert.That(undantag.Message.ToLower(), Does.Contain("visningar"));
-            }            
+            var ritareMock = new Mock<IRitare>(MockBehavior.Strict);
+            var ordning = new MockSequence();
+            ritareMock.InSequence(ordning).Setup(ritare => ritare.KopieraBildTillSkärmen(1, 2, 4, 5, 6, 7));
+            ritareMock.InSequence(ordning).Setup(ritare => ritare.KopieraBildTillSkärmen(11, 12, 14, 15, 16, 17));
+
+            var visningar = new Visningar();            
+            visningar.LäggTill(new Visning(11, 12, 13, 14, 15, 16, 17));
+            visningar.LäggTill(new Visning(1, 2, 3, 4, 5, 6, 7));
+            visningar.Visa(ritareMock.Object);
         }
 
         [Test]
@@ -80,6 +79,21 @@ namespace Regel
             visningar.LäggTill(new Visning(1, 2, 3, 4, 5, 6, 7));
             visningar.LäggTill(new Visning(11, 12, 13, 14, 15, 16, 17));
             Assert.That(visningar.AntalVisningar(), Is.EqualTo(2));
+        }
+
+        [Test]
+        public void Visningar_borde_göra_undantag_om_null_läggs_till()
+        {
+            var visningar = new Visningar();
+            try
+            {
+                visningar.LäggTill(null);
+                Assert.Fail("Inget undantag gjordes.");
+            }
+            catch (UndantagFörNull undantag)
+            {
+                Assert.That(undantag.Message.ToLower(), Does.Contain("visningar"));
+            }
         }
     }
 }

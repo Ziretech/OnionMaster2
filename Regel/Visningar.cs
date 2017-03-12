@@ -37,7 +37,7 @@ namespace Regel
 
         public void Visa(IRitare ritare)
         {
-            foreach(var visning in _visningar)
+            foreach(var visning in _visningar.OrderBy(visning => visning.Skärmlager))
             {
                 visning.Visa(ritare);
             }
