@@ -7,7 +7,7 @@ using Entitet;
 using Regel.Ingång;
 using Regel.Utgång;
 
-namespace Regel
+namespace Regel.Visa
 {
     class VisaSpelet : IVisaSpelet
     {
@@ -16,17 +16,8 @@ namespace Regel
 
         public VisaSpelet(IRitare ritare, ISpelvärld spelvärld)
         {
-            if(ritare == null)
-            {
-                throw new UndantagFörNull("Ritare får inte vara null.");
-            }
-            _ritare = ritare;
-
-            if (spelvärld == null)
-            {
-                throw new UndantagFörNull("Spelvärld får inte vara null.");
-            }
-            _spelvärld = spelvärld;
+            _ritare = ritare ?? throw new UndantagFörSaknatKrav("Ritare får inte vara null.");
+            _spelvärld = spelvärld ?? throw new UndantagFörSaknatKrav("Spelvärld får inte vara null.");
         }
 
         public void Visa()

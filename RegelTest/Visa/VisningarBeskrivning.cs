@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Regel
+namespace Regel.Visa
 {
     [TestFixture]
     public class VisningarBeskrivning
@@ -90,7 +90,7 @@ namespace Regel
                 visningar.LäggTill(null);
                 Assert.Fail("Inget undantag gjordes.");
             }
-            catch (UndantagFörNull undantag)
+            catch (UndantagFörSaknatKrav undantag)
             {
                 Assert.That(undantag.Message.ToLower(), Does.Contain("visningar"));
             }

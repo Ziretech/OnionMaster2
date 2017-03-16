@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Regel
+namespace Regel.Visa
 {
     [TestFixture]
     public class VisaBilderBeskrivning
@@ -62,7 +62,7 @@ namespace Regel
                 new VisaBilder(null);
                 Assert.Fail("Inget undantag gjordes.");
             }
-            catch(UndantagFörNull undantag)
+            catch(UndantagFörSaknatKrav undantag)
             {
                 Assert.That(undantag.Message.ToLower(), Does.Contain("spelvärld"));
             }

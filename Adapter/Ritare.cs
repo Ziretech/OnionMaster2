@@ -14,7 +14,7 @@ namespace Adapter
 
         public Ritare(IGrafik grafik)
         {
-            _grafik = grafik ?? throw new UndantagFörNull("Grafik får inte vara null.");
+            _grafik = grafik ?? throw new UndantagFörSaknatKrav("Grafik får inte vara null.");
         }
 
         public void KopieraBildTillSkärmen(int skärmX, int skärmY, int bildmängdX, int bildmängdY, int bredd, int höjd)

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entitet;
 
-namespace Regel
+namespace Regel.Visa
 {
     public class VisaBilder
     {
@@ -15,7 +15,7 @@ namespace Regel
         {
             if(spelvärld == null)
             {
-                throw new UndantagFörNull("Spelvärld får inte vara null.");
+                throw new UndantagFörSaknatKrav("Spelvärld får inte vara null.");
             }
             _bilder = spelvärld.HämtaObjekt(BildVäljare);
         }

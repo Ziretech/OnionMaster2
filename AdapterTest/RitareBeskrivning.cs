@@ -29,7 +29,7 @@ namespace Adapter
                 var ritare = new Ritare(null);
                 Assert.Fail("Inget undantag gjordes.");
             }
-            catch(UndantagFörNull undantag)
+            catch(UndantagFörSaknatKrav undantag)
             {
                 Assert.That(undantag.Message.ToLower(), Does.Contain("grafik"));
             }            

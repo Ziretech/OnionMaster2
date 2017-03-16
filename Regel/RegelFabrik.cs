@@ -1,6 +1,7 @@
 ﻿using Entitet;
 using Regel.Ingång;
 using Regel.Utgång;
+using Regel.Visa;
 using System;
 using System.Collections.Generic;
 using System.Linq;

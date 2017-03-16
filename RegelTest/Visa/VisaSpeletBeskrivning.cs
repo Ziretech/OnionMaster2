@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Regel
+namespace Regel.Visa
 {
     [TestFixture]
     public class VisaSpeletBeskrivning
@@ -44,21 +44,21 @@ namespace Regel
         }
 
         [Test]
-        public void VisaSpelet_gör_undantag_för_när_ritare_är_null()
+        public void VisaSpelet_borde_göra_undantag_för_när_det_inte_finns_någon_ritare()
         {
             try
             {
                 VisaSpelet(null, new Spelvärld());
                 Assert.Fail("Inget undantag gjordes.");
             }
-            catch(UndantagFörNull undantag)
+            catch(UndantagFörSaknatKrav undantag)
             {
                 Assert.That(undantag.Message.ToLower(), Does.Contain("ritare"));
             }
         }
 
         [Test]
-        public void VisaSpelet_gör_undantag_för_när_spelvärld_är_null()
+        public void VisaSpelet_borde_göra_undantag_för_när_det_inte_finns_någon_spelvärld()
         {
             try
             {
@@ -66,7 +66,7 @@ namespace Regel
                 VisaSpelet(ritareMock.Object, null);
                 Assert.Fail("Inget undantag gjordes.");
             }
-            catch (UndantagFörNull undantag)
+            catch (UndantagFörSaknatKrav undantag)
             {
                 Assert.That(undantag.Message.ToLower(), Does.Contain("spelvärld"));
             }

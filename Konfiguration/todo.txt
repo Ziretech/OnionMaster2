@@ -1,0 +1,18 @@
+﻿(TagTidssteg skapas)
+TagTidssteg utan spelarhandling: undantag
+TagTidssteg utan spelvärld: undantag
+TagTidssteg borde skapa ett FlyttaSpelar-objekt som får tillgång till ISpelarhandling.
+TagTidssteg borde göra undantag för om spelarhandling är null? eller bara inte förändra?
+Objekt borde ha Kontroll-objekt.
+Kontroll borde ha attributen FlyttaUpp, FlyttaNer, FlyttaVänster, FlyttaHöger av typen Förändring-objekt.
+Förändring har attributet Position av typen Positionsförändring.
+Positionsförändring borde ha attributen X och Y för att ange hur Position-objektet ska förändras.
+FlyttaSpelarobjekt borde skapas
+FlyttaSpelarobjekt utan spelvärld: undantag
+FlyttaSpelarobjekt utan spelarhandling: undantag
+FlyttaSpelarobjekt borde FörändraPosition för alla Kontroll-objekt med Positionsförändringar
+FlyttaSpelarobjekt borde förändra alla objekt som har Kontroll-objekt med Positionsförändringar vid FlyttaUpp, när spelaren väljer att flytta upp
+FlyttaSpelarobjekt borde samma som ovan för FlyttaNer
+FlyttaSpelarobjekt borde samma som ovan för FlyttaVänster
+FlyttaSpelarobjekt borde samma som ovan för FlyttaHöger
+Skapa beskrivning av spelfönster.

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Regel
+namespace Regel.Visa
 {
     public class Visningar
     {
@@ -30,7 +30,7 @@ namespace Regel
         {
             if(visning == null)
             {
-                throw new UndantagFörNull("Visning måste vara definierad när det läggs till visningar.");
+                throw new UndantagFörSaknatKrav("Visning måste vara definierad när det läggs till visningar.");
             }
             _visningar.Add(visning);
         }
