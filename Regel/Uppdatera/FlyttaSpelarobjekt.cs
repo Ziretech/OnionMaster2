@@ -1,4 +1,5 @@
 ﻿using Entitet;
+using Regel.Utgång;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,41 @@ namespace Regel.Uppdatera
 {
     public class FlyttaSpelarobjekt
     {
-        public FlyttaSpelarobjekt(ISpelvärld spelvärld)
-        {
+        private readonly ISpelvärld _spelvärld;
+        private readonly Objekt _spelarkaraktär;
+        private readonly ISpelarhandling _spelarhandling;
 
+        public FlyttaSpelarobjekt(ISpelvärld spelvärld, ISpelarhandling spelarhandling)
+        {
+            _spelvärld = spelvärld;
+            _spelarkaraktär = _spelvärld.HämtaSpelarKaraktären();
+            _spelarhandling = spelarhandling;
         }
 
-        public void FlyttaUpp()
-        {
-            throw new NotImplementedException();
+        public void Flytta()
+        {            
+            var distans = 2;
+
+            if (_spelarhandling.FlyttaUpp())
+            {
+                var tidigare = _spelarkaraktär.Position;
+                _spelarkaraktär.Position = new Position(tidigare.X, tidigare.Y + distans, tidigare.Z);
+            }
+            if (_spelarhandling.FlyttaNer())
+            {
+                var tidigare = _spelarkaraktär.Position;
+                _spelarkaraktär.Position = new Position(tidigare.X, tidigare.Y - distans, tidigare.Z);
+            }
+            if (_spelarhandling.FlyttaHöger())
+            {
+                var tidigare = _spelarkaraktär.Position;
+                _spelarkaraktär.Position = new Position(tidigare.X + distans, tidigare.Y, tidigare.Z);
+            }
+            if (_spelarhandling.FlyttaVänster())
+            {
+                var tidigare = _spelarkaraktär.Position;
+                _spelarkaraktär.Position = new Position(tidigare.X - distans, tidigare.Y, tidigare.Z);
+            }
         }
     }
 }

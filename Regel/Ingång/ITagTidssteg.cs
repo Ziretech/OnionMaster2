@@ -9,6 +9,6 @@ namespace Regel.Ingång
 {
     public interface ITagTidssteg
     {
-        void Tick(ISpelarhandling spelarhandling);
+        void Tick();
     }
 }

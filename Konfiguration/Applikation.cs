@@ -15,9 +15,12 @@ namespace Konfiguration
     {
         static void Main(string[] args)
         {
+            var openTKFönster = new GameWindow();
+
             var fönster = new Spelfönster(
-                new GameWindow(),
-                new OpenGLGrafik(), 
+                openTKFönster,
+                new OpenGLGrafik(),
+                new Interaktionsadapter(openTKFönster.Keyboard),
                 new Bitmap("c:/temp/tiles.png"), 
                 new RegelFabrik(), 
                 SkapaSpelvärld());
@@ -39,7 +42,9 @@ namespace Konfiguration
             };
 
             var spelvärld = new Spelvärld();
-            spelvärld.LäggTill(new Objekt { Position = new Position(3 * 32, 3 * 32, 1), Bild = new Bild(new Bildmängdskoordinat(0, 0), tile) });
+
+            var spelarkaraktär = new Objekt { Position = new Position(3 * 32, 3 * 32, 1), Bild = new Bild(new Bildmängdskoordinat(0, 0), new Bildstorlek(32, 32)) };
+            spelvärld.LäggTill(spelarkaraktär, Objekttyp.Spelarkaraktären);
 
             for (var y = 0; y < 5; y++)
             {

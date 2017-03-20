@@ -1,5 +1,6 @@
 ﻿using Entitet;
 using Regel.Ingång;
+using Regel.Uppdatera;
 using Regel.Utgång;
 using Regel.Visa;
 using System;
@@ -15,6 +16,11 @@ namespace Regel
         public IVisaSpelet SkapaVisaSpelet(IRitare ritare, ISpelvärld spelvärld)
         {
             return new VisaSpelet(ritare, spelvärld);
+        }
+
+        public ITagTidssteg SkapaTagTidssteg(ISpelarhandling spelarhandling, ISpelvärld spelvärld)
+        {
+            return new TagTidssteg(spelarhandling, spelvärld);
         }
     }
 }

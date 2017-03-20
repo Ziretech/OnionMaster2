@@ -1,8 +1,8 @@
-﻿(TagTidssteg skapas)
-TagTidssteg utan spelarhandling: undantag
-TagTidssteg utan spelvärld: undantag
+﻿x TagTidssteg skapas
+x TagTidssteg utan spelarhandling: undantag
+x TagTidssteg utan spelvärld: undantag
+x TagTidssteg utan regelfabrik: undantag
 TagTidssteg borde skapa ett FlyttaSpelar-objekt som får tillgång till ISpelarhandling.
-TagTidssteg borde göra undantag för om spelarhandling är null? eller bara inte förändra?
 Objekt borde ha Kontroll-objekt.
 Kontroll borde ha attributen FlyttaUpp, FlyttaNer, FlyttaVänster, FlyttaHöger av typen Förändring-objekt.
 Förändring har attributet Position av typen Positionsförändring.
