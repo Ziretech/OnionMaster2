@@ -16,9 +16,9 @@ namespace Regel.Uppdatera
 
         public FlyttaSpelarobjekt(ISpelvärld spelvärld, ISpelarhandling spelarhandling)
         {
-            _spelvärld = spelvärld;
+            _spelvärld = spelvärld ?? throw new UndantagFörSaknatKrav("FlyttaSpelarobjekt måste skapas med spelvärld.");
             _spelarkaraktär = _spelvärld.HämtaSpelarKaraktären();
-            _spelarhandling = spelarhandling;
+            _spelarhandling = spelarhandling ?? throw new UndantagFörSaknatKrav("FlyttaSpelarobjekt måste skapas med spelarhandling.");
         }
 
         public void Flytta()

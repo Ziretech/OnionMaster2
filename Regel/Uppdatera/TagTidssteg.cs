@@ -22,11 +22,6 @@ namespace Regel.Uppdatera
 
         public void Tick()
         {
-            // för varje handling
-
-            // för varje objekt som har ett kontroll-objekt
-            // för varje kontroll-objekt som har en action kopplad till 
-
             var flyttaSpelarobjekt = new FlyttaSpelarobjekt(_spelvärld, _spelarhandling);
             flyttaSpelarobjekt.Flytta();
         }
