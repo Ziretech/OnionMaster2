@@ -18,8 +18,22 @@ namespace Regel
         public void RegelFabrik_borde_skapa_VisaSpelet()
         {
             var ritareMock = new Mock<IRitare>();
-            var visaSpelet = new RegelFabrik().SkapaVisaSpelet(ritareMock.Object, new Spelvärld());
+            var visaSpelet = new RegelFabrik(new Spelvärld()).SkapaVisaSpelet(ritareMock.Object);
             Assert.That(visaSpelet, Is.InstanceOf(typeof(IVisaSpelet)));
+        }
+
+        [Test]
+        public void RegelFabrik_borde_göra_undantag_för_att_skapas_utan_spelvärld()
+        {
+            try
+            {
+                new RegelFabrik(null);
+                Assert.Fail("Inget undantag gjordes.");
+            }
+            catch(UndantagFörSaknatKrav undantag)
+            {
+                Assert.That(undantag.Message.ToLower(), Does.Contain("spelvärld"));
+            }
         }
     }
 }

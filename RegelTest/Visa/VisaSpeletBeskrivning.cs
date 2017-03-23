@@ -74,7 +74,7 @@ namespace Regel.Visa
 
         private IVisaSpelet VisaSpelet(IRitare ritare, Spelvärld spelvärld)
         {
-            return new RegelFabrik().SkapaVisaSpelet(ritare, spelvärld);
+            return new RegelFabrik(spelvärld).SkapaVisaSpelet(ritare);
         }
 
         private Spelvärld SkapaSpelvärld(params Objekt[] lista)

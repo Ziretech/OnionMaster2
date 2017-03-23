@@ -65,13 +65,13 @@ namespace Adapter
 
         private void Tick(object sender, FrameEventArgs e)
         {
-            _regelfabrik.SkapaTagTidssteg(_spelarhandling, _spelvärld).Tick();
+            _regelfabrik.SkapaTagTidssteg(_spelarhandling).Tick();
         }
 
         private void Visa(object sender, FrameEventArgs e)
         {
             _grafik.TömRityta();
-            _regelfabrik.SkapaVisaSpelet(_ritare, _spelvärld).Visa();
+            _regelfabrik.SkapaVisaSpelet(_ritare).Visa();
             _gameWindow.SwapBuffers();
         }
     }

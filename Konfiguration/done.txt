@@ -1,1 +1,5 @@
 ﻿x Skapa TODO i huvudprojektet.
+x TagTidssteg skapas
+x TagTidssteg utan spelarhandling: undantag
+x TagTidssteg utan spelvärld: undantag
+x TagTidssteg utan regelfabrik: undantag

@@ -11,7 +11,7 @@ namespace Regel.Ingång
 {
     public interface IRegelFabrik
     {
-        IVisaSpelet SkapaVisaSpelet(IRitare ritare, ISpelvärld spelvärld);
-        ITagTidssteg SkapaTagTidssteg(ISpelarhandling spelarhandling, ISpelvärld spelvärld);
+        IVisaSpelet SkapaVisaSpelet(IRitare ritare);
+        ITagTidssteg SkapaTagTidssteg(ISpelarhandling spelarhandling);
     }
 }
