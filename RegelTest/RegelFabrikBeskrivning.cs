@@ -18,7 +18,7 @@ namespace Regel
         public void RegelFabrik_borde_skapa_VisaSpelet()
         {
             var ritareMock = new Mock<IRitare>();
-            var visaSpelet = new RegelFabrik { Spelvärld = new Spelvärld(), Ritare = ritareMock.Object }.SkapaVisaSpelet();
+            var visaSpelet = new Regelfabrik { Spelvärld = new Spelvärld(), Ritare = ritareMock.Object }.SkapaVisaSpelet();
             Assert.That(visaSpelet, Is.InstanceOf(typeof(IVisaSpelet)));
         }
 
@@ -26,7 +26,7 @@ namespace Regel
         public void RegelFabrik_borde_skapa_TagTidssteg()
         {
             var spelarhandlingMock = new Mock<ISpelarhandling>();
-            var visaSpelet = new RegelFabrik { Spelvärld = new Spelvärld(), Spelarhandling = spelarhandlingMock.Object }.SkapaTagTidssteg();
+            var visaSpelet = new Regelfabrik { Spelvärld = new Spelvärld(), Spelarhandling = spelarhandlingMock.Object }.SkapaTagTidssteg();
             Assert.That(visaSpelet, Is.InstanceOf(typeof(ITagTidssteg)));
         }
 
@@ -36,7 +36,7 @@ namespace Regel
             var ritareMock = new Mock<IRitare>();
             try
             {
-                new RegelFabrik { Ritare = ritareMock.Object }.SkapaVisaSpelet();
+                new Regelfabrik { Ritare = ritareMock.Object }.SkapaVisaSpelet();
                 Assert.Fail("Inget undantag gjordes.");
             }
             catch(UndantagFörSaknatKrav undantag)
@@ -50,7 +50,7 @@ namespace Regel
         {
             try
             {
-                new RegelFabrik { Spelvärld = new Spelvärld() }.SkapaVisaSpelet();
+                new Regelfabrik { Spelvärld = new Spelvärld() }.SkapaVisaSpelet();
                 Assert.Fail("Inget undantag gjordes.");
             }
             catch (UndantagFörSaknatKrav undantag)
@@ -65,7 +65,7 @@ namespace Regel
             var spelarhandlingMock = new Mock<ISpelarhandling>();
             try
             {
-                new RegelFabrik { Spelarhandling = spelarhandlingMock.Object }.SkapaTagTidssteg();
+                new Regelfabrik { Spelarhandling = spelarhandlingMock.Object }.SkapaTagTidssteg();
                 Assert.Fail("Inget undantag gjordes.");
             }
             catch (UndantagFörSaknatKrav undantag)
@@ -79,7 +79,7 @@ namespace Regel
         {
             try
             {
-                new RegelFabrik { Spelvärld = new Spelvärld() }.SkapaTagTidssteg();
+                new Regelfabrik { Spelvärld = new Spelvärld() }.SkapaTagTidssteg();
                 Assert.Fail("Inget undantag gjordes.");
             }
             catch (UndantagFörSaknatKrav undantag)

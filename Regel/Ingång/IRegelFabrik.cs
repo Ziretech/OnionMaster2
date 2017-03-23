@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Regel.Ingång
 {
-    public interface IRegelFabrik
+    public interface IRegelfabrik
     {
         IVisaSpelet SkapaVisaSpelet();
         ITagTidssteg SkapaTagTidssteg();

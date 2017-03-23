@@ -1,5 +1,1 @@
-﻿x Regelfabrik borde skapas med spelvärld.
-x Spelfönster borde inte behöva skapas med spelvärld.
-x Regelfabrik borde skapas med ritare.
-x Regelfabrik borde skapas med spelarhandling.
-x Spelfönster borde inte behöva skapas med spelarhandling.
+﻿

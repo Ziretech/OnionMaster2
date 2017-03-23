@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Regel
 {
-    public class RegelFabrik : IRegelFabrik
+    public class Regelfabrik : IRegelfabrik
     {
         public ISpelvärld Spelvärld { get; set; }
         public IRitare Ritare { get; set; }

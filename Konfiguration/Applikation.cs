@@ -18,7 +18,7 @@ namespace Konfiguration
             var openTKFönster = new GameWindow();
             var grafik = new OpenGLGrafik();
             var ritare = new Ritare(grafik);
-            var regelfabrik = new RegelFabrik
+            var regelfabrik = new Regelfabrik
             {
                 Spelvärld = SkapaSpelvärld(),
                 Ritare = ritare,

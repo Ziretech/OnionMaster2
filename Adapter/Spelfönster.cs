@@ -18,9 +18,9 @@ namespace Adapter
         private readonly double _uppdateringarISekunden;
         private readonly IGrafik _grafik;
         private readonly Bitmap _textur;
-        private readonly IRegelFabrik _regelfabrik;
+        private readonly IRegelfabrik _regelfabrik;
 
-        public Spelfönster(GameWindow gameWindow, IGrafik grafik, Bitmap textur, IRegelFabrik regelfabrik)
+        public Spelfönster(GameWindow gameWindow, IGrafik grafik, Bitmap textur, IRegelfabrik regelfabrik)
         {
             _gameWindow = gameWindow;
             _grafik = grafik;
