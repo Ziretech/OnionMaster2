@@ -15,15 +15,16 @@ namespace Regel
     {
         public ISpelvärld Spelvärld { get; set; }
         public IRitare Ritare { get; set; }
+        public ISpelarhandling Spelarhandling { get; set; }
 
         public IVisaSpelet SkapaVisaSpelet()
         {
             return new VisaSpelet(Ritare, Spelvärld);
         }
 
-        public ITagTidssteg SkapaTagTidssteg(ISpelarhandling spelarhandling)
+        public ITagTidssteg SkapaTagTidssteg()
         {
-            return new TagTidssteg(spelarhandling, Spelvärld);
+            return new TagTidssteg(Spelarhandling, Spelvärld);
         }
     }
 }

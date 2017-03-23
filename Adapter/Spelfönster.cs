@@ -19,15 +19,13 @@ namespace Adapter
         private readonly IGrafik _grafik;
         private readonly Bitmap _textur;
         private readonly IRegelFabrik _regelfabrik;
-        private readonly ISpelarhandling _spelarhandling;
 
-        public Spelfönster(GameWindow gameWindow, IGrafik grafik, ISpelarhandling spelarhandling, Bitmap textur, IRegelFabrik regelfabrik)
+        public Spelfönster(GameWindow gameWindow, IGrafik grafik, Bitmap textur, IRegelFabrik regelfabrik)
         {
             _gameWindow = gameWindow;
             _grafik = grafik;
             _textur = textur;
             _regelfabrik = regelfabrik;
-            _spelarhandling = spelarhandling;
 
             _gameWindow.Load += Ladda;
             _gameWindow.Resize += ÄndraStorlek;
@@ -61,7 +59,7 @@ namespace Adapter
 
         private void Tick(object sender, FrameEventArgs e)
         {
-            _regelfabrik.SkapaTagTidssteg(_spelarhandling).Tick();
+            _regelfabrik.SkapaTagTidssteg().Tick();
         }
 
         private void Visa(object sender, FrameEventArgs e)

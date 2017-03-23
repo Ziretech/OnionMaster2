@@ -26,7 +26,7 @@ namespace Regel
         public void RegelFabrik_borde_skapa_TagTidssteg()
         {
             var spelarhandlingMock = new Mock<ISpelarhandling>();
-            var visaSpelet = new RegelFabrik { Spelvärld = new Spelvärld() }.SkapaTagTidssteg(spelarhandlingMock.Object);
+            var visaSpelet = new RegelFabrik { Spelvärld = new Spelvärld(), Spelarhandling = spelarhandlingMock.Object }.SkapaTagTidssteg();
             Assert.That(visaSpelet, Is.InstanceOf(typeof(ITagTidssteg)));
         }
 
@@ -48,7 +48,6 @@ namespace Regel
         [Test]
         public void RegelFabrik_borde_göra_undantag_för_att_skapa_VisaSpelet_utan_ritare()
         {
-            var ritareMock = new Mock<IRitare>();
             try
             {
                 new RegelFabrik { Spelvärld = new Spelvärld() }.SkapaVisaSpelet();
@@ -57,6 +56,35 @@ namespace Regel
             catch (UndantagFörSaknatKrav undantag)
             {
                 Assert.That(undantag.Message.ToLower(), Does.Contain("visaspelet").And.Contain("ritare"));
+            }
+        }
+
+        [Test]
+        public void RegelFabrik_borde_göra_undantag_för_att_skapa_TagTidssteg_utan_spelvärld()
+        {
+            var spelarhandlingMock = new Mock<ISpelarhandling>();
+            try
+            {
+                new RegelFabrik { Spelarhandling = spelarhandlingMock.Object }.SkapaTagTidssteg();
+                Assert.Fail("Inget undantag gjordes.");
+            }
+            catch (UndantagFörSaknatKrav undantag)
+            {
+                Assert.That(undantag.Message.ToLower(), Does.Contain("tagtidssteg").And.Contain("spelvärld"));
+            }
+        }
+
+        [Test]
+        public void RegelFabrik_borde_göra_undantag_för_att_skapa_VisaSpelet_utan_spelarhandling()
+        {
+            try
+            {
+                new RegelFabrik { Spelvärld = new Spelvärld() }.SkapaTagTidssteg();
+                Assert.Fail("Inget undantag gjordes.");
+            }
+            catch (UndantagFörSaknatKrav undantag)
+            {
+                Assert.That(undantag.Message.ToLower(), Does.Contain("tagtidssteg").And.Contain("spelarhandling"));
             }
         }
     }

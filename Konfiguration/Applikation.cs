@@ -21,13 +21,13 @@ namespace Konfiguration
             var regelfabrik = new RegelFabrik
             {
                 Spelvärld = SkapaSpelvärld(),
-                Ritare = ritare
+                Ritare = ritare,
+                Spelarhandling = new Interaktionsadapter(openTKFönster.Keyboard)
             };
 
             var fönster = new Spelfönster(
                 openTKFönster,
                 grafik,
-                new Interaktionsadapter(openTKFönster.Keyboard),
                 new Bitmap("c:/temp/tiles.png"), 
                 regelfabrik);
 
