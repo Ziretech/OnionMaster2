@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Regel
 {
+    [Serializable]
     public class UndantagFörSaknatKrav : Exception
     {
         public UndantagFörSaknatKrav() : base() { }
