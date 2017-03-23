@@ -18,13 +18,18 @@ namespace Konfiguration
             var openTKFönster = new GameWindow();
             var grafik = new OpenGLGrafik();
             var ritare = new Ritare(grafik);
+            var regelfabrik = new RegelFabrik
+            {
+                Spelvärld = SkapaSpelvärld(),
+                Ritare = ritare
+            };
 
             var fönster = new Spelfönster(
                 openTKFönster,
                 grafik,
                 new Interaktionsadapter(openTKFönster.Keyboard),
                 new Bitmap("c:/temp/tiles.png"), 
-                new RegelFabrik(SkapaSpelvärld(), ritare));
+                regelfabrik);
 
             fönster.Öppna();
         }

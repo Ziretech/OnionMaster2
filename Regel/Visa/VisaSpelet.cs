@@ -16,8 +16,8 @@ namespace Regel.Visa
 
         public VisaSpelet(IRitare ritare, ISpelvärld spelvärld)
         {
-            _ritare = ritare ?? throw new UndantagFörSaknatKrav("Ritare får inte vara null.");
-            _spelvärld = spelvärld ?? throw new UndantagFörSaknatKrav("Spelvärld får inte vara null.");
+            _ritare = ritare ?? throw new UndantagFörSaknatKrav("VisaSpelet får inte skapas utan ritare.");
+            _spelvärld = spelvärld ?? throw new UndantagFörSaknatKrav("VisaSpelet får inte skapas utan spelvärld.");
         }
 
         public void Visa()

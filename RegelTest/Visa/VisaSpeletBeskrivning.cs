@@ -53,7 +53,7 @@ namespace Regel.Visa
             }
             catch(UndantagFörSaknatKrav undantag)
             {
-                Assert.That(undantag.Message.ToLower(), Does.Contain("ritare"));
+                Assert.That(undantag.Message.ToLower(), Does.Contain("visaspelet").And.Contain("ritare"));
             }
         }
 
@@ -68,13 +68,13 @@ namespace Regel.Visa
             }
             catch (UndantagFörSaknatKrav undantag)
             {
-                Assert.That(undantag.Message.ToLower(), Does.Contain("spelvärld"));
+                Assert.That(undantag.Message.ToLower(), Does.Contain("visaspelet").And.Contain("spelvärld"));
             }
         }
 
         private IVisaSpelet VisaSpelet(IRitare ritare, Spelvärld spelvärld)
         {
-            return new RegelFabrik(spelvärld, ritare).SkapaVisaSpelet();
+            return new RegelFabrik { Spelvärld = spelvärld, Ritare = ritare }.SkapaVisaSpelet();
         }
 
         private Spelvärld SkapaSpelvärld(params Objekt[] lista)
