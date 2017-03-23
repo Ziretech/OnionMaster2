@@ -19,18 +19,16 @@ namespace Adapter
         private readonly IGrafik _grafik;
         private readonly IRitare _ritare;
         private readonly Bitmap _textur;
-        private readonly ISpelvärld _spelvärld;
         private readonly IRegelFabrik _regelfabrik;
         private readonly ISpelarhandling _spelarhandling;
 
-        public Spelfönster(GameWindow gameWindow, IGrafik grafik, ISpelarhandling spelarhandling, Bitmap textur, IRegelFabrik regelfabrik, ISpelvärld spelvärld)
+        public Spelfönster(GameWindow gameWindow, IGrafik grafik, ISpelarhandling spelarhandling, Bitmap textur, IRegelFabrik regelfabrik)
         {
             _gameWindow = gameWindow;
             _grafik = grafik;
             _textur = textur;
             _ritare = new Ritare(_grafik);
             _regelfabrik = regelfabrik;
-            _spelvärld = spelvärld;
             _spelarhandling = spelarhandling;
 
             _gameWindow.Load += Ladda;
