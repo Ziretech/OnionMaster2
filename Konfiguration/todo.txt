@@ -1,3 +1,5 @@
-﻿Regelfabrik borde ta emot spelvärld, ritare, spelarhandling och lägga till det i de ingångar som skapas.
-Applikation borde definiera upp ritare och lägga till i regelfabrik
-Spelfönster borde inte behöva hantera spelvärld, ritare, spelarhandling
+﻿x Regelfabrik borde skapas med spelvärld.
+x Spelfönster borde inte behöva skapas med spelvärld.
+x Regelfabrik borde skapas med ritare.
+Regelfabrik borde skapas med spelarhandling.
+Spelfönster borde inte behöva skapas med spelarhandling.

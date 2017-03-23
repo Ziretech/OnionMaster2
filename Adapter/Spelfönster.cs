@@ -17,7 +17,6 @@ namespace Adapter
         private GameWindow _gameWindow;
         private readonly double _uppdateringarISekunden;
         private readonly IGrafik _grafik;
-        private readonly IRitare _ritare;
         private readonly Bitmap _textur;
         private readonly IRegelFabrik _regelfabrik;
         private readonly ISpelarhandling _spelarhandling;
@@ -27,7 +26,6 @@ namespace Adapter
             _gameWindow = gameWindow;
             _grafik = grafik;
             _textur = textur;
-            _ritare = new Ritare(_grafik);
             _regelfabrik = regelfabrik;
             _spelarhandling = spelarhandling;
 
@@ -69,7 +67,7 @@ namespace Adapter
         private void Visa(object sender, FrameEventArgs e)
         {
             _grafik.TömRityta();
-            _regelfabrik.SkapaVisaSpelet(_ritare).Visa();
+            _regelfabrik.SkapaVisaSpelet().Visa();
             _gameWindow.SwapBuffers();
         }
     }

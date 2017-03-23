@@ -16,13 +16,15 @@ namespace Konfiguration
         static void Main(string[] args)
         {
             var openTKFönster = new GameWindow();
+            var grafik = new OpenGLGrafik();
+            var ritare = new Ritare(grafik);
 
             var fönster = new Spelfönster(
                 openTKFönster,
-                new OpenGLGrafik(),
+                grafik,
                 new Interaktionsadapter(openTKFönster.Keyboard),
                 new Bitmap("c:/temp/tiles.png"), 
-                new RegelFabrik(SkapaSpelvärld()));
+                new RegelFabrik(SkapaSpelvärld(), ritare));
 
             fönster.Öppna();
         }

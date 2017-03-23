@@ -14,15 +14,17 @@ namespace Regel
     public class RegelFabrik : IRegelFabrik
     {
         private readonly ISpelvärld _spelvärld;
+        private readonly IRitare _ritare;
 
-        public RegelFabrik(ISpelvärld spelvärld)
+        public RegelFabrik(ISpelvärld spelvärld, IRitare ritare)
         {
             _spelvärld = spelvärld ?? throw new UndantagFörSaknatKrav("RegelFabrik behöver spelvärld för att skapas.");
+            _ritare = ritare ?? throw new UndantagFörSaknatKrav("RegelFabrik behöver ritare för att skapas.");
         }
 
-        public IVisaSpelet SkapaVisaSpelet(IRitare ritare)
+        public IVisaSpelet SkapaVisaSpelet()
         {
-            return new VisaSpelet(ritare, _spelvärld);
+            return new VisaSpelet(_ritare, _spelvärld);
         }
 
         public ITagTidssteg SkapaTagTidssteg(ISpelarhandling spelarhandling)
