@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bild.cs" />
+    <Compile Include="Bilder.cs" />
     <Compile Include="Bildmängdskoordinat.cs" />
     <Compile Include="Bildstorlek.cs" />
     <Compile Include="ISpelvärld.cs" />
