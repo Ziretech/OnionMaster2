@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BildBeskrivning.cs" />
     <Compile Include="BilderBeskrivning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpelvärldBeskrivning.cs" />
+    <Compile Include="EntitetsBeskrivning.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entitet\Entitet.csproj">

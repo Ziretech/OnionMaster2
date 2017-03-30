@@ -8,3 +8,7 @@ x Spelfönster borde inte behöva skapas med spelvärld.
 x Regelfabrik borde skapas med ritare.
 x Regelfabrik borde skapas med spelarhandling.
 x Spelfönster borde inte behöva skapas med spelarhandling.
+x Skapa Bilder.
+x Bild: ToString
+x Bild: Equals
+x Bild: HashCode
