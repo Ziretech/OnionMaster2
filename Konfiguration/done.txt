@@ -12,3 +12,6 @@ x Skapa Bilder.
 x Bild: ToString
 x Bild: Equals
 x Bild: HashCode
+x Växla ordning på Strängrepresentationer, det är möjligt att man vill att två olika objekt kan ge samma representation.
+x Bilder borde hämta enda bilden baserat på index.
+x Bilder borde hämta andra bilden baserat på index.

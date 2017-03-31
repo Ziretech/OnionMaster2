@@ -24,7 +24,7 @@ namespace Entitet
 
         public Bild HämtaMedIndex(int v)
         {
-            return new Bild(new Bildmängdskoordinat(3, 3), new Bildstorlek(3, 3));
+            return _bilder[v];
         }
     }
 }

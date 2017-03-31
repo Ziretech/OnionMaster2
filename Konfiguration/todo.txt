@@ -1,13 +1,29 @@
-﻿x Växla ordning på Strängrepresentationer, det är möjligt att man vill att två olika objekt kan ge samma representation.
-Bilder borde hämta bild baserat på index.
-Skapa Bildruta.
-Skapa Bildrutor.
-Skapa Animation.
-Skapa Animationer.
+﻿Bilder borde uppfylla kraven för att vara en entitet (?)
+Bildruta borde ha egenskaperna visningstid, bildindex, position.
+Bildruta borde uppfylla kraven för att vara en entitet.
+Bildrutor borde ha 0 bildrutor när de är tomma.
+Bildrutor borde ha 1 bildruta när har en bildruta.
+Bildrutor borde ha 2 bildrutor när de har två bildrutor.
+Bildrutor borde uppfylla kraven för att vara en entitet.
+Animation borde uppfylla kraven för att vara en entitet.
+Animation borde ha en id.
+Animation borde ha bildrutor.
+Animationer borde innehålla Animation-lista.
+AktivAnimation borde ha egenskaperna Animation (id), och starttid.
+Objekt med bilddefinitioner borde ha Bilddefinitioner.
+Objekt med animationer borde ha Animationer.
+Objekt med aktiv animation borde ha AktivAnimation.
+Visning av animation med 1 bildruta med start vid 3 borde visa bilden vid 3
+Visning av animation med 2 bildrutor med start vid 0 borde visa bild 1 vid 0
+Visning av animation med 2 bildrutor på 1 tick med start vid 1 borde visa bild 1 vid 1
+Visning av animation med 2 bildrutor på 1 tick med start vid 1 borde visa bild 2 vid 2
+Visning av animation med 2 bildrutor på 1 tick med start vid 1 borde visa bild 1 vid 3
+Visning av animation med 2 bildrutor på 2 tick med start vid 3 borde visa bild 1 vid 4
 
-Skapa AktivAnimation.
+Refaktorering: Adapter borde inte få söka efter regler. De ska få sina regler injicerade i konstruktorerna.
+Refaktorering: Regler som behöver andra regler ska få sina regler injicerade i sin konstruktor.
+Refaktorering: Konfigurationslagret (som ska hantera all injicering) kan få använda Unity eller liknande DI verktyg.
+
 Starta animation.
-Visa Animation (1 av 1) med 1 bild.
-Beräkna vilken bild i animationen som ska visas.
 Välja animation.
 Stänga av animation när karaktären slutar gå.

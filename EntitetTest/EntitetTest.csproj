@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BildBeskrivning.cs" />
     <Compile Include="BilderBeskrivning.cs" />
+    <Compile Include="BildrutaBeskrivning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpelvärldBeskrivning.cs" />
     <Compile Include="EntitetsBeskrivning.cs" />

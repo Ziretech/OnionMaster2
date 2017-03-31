@@ -32,12 +32,19 @@ namespace Entitet
         }
 
         [Test]
-        [Ignore("Beskriv Bild.Equals")]
         public void Bilder_borde_hämta_enda_bilden()
         {
             var endaBilden = SkapaBild(1);
             var bilder = new Bilder(new List<Bild> { endaBilden });
             Assert.That(bilder.HämtaMedIndex(0), Is.EqualTo(endaBilden));
+        }
+
+        [Test]
+        public void Bilder_borde_hämta_andra_bilden()
+        {
+            var andraBilden = SkapaBild(3);
+            var bilder = new Bilder(new List<Bild> { SkapaBild(2), andraBilden });
+            Assert.That(bilder.HämtaMedIndex(1), Is.EqualTo(andraBilden));
         }
 
         private Bild SkapaBild(int x = 0)
