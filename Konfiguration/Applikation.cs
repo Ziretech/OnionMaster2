@@ -1,5 +1,6 @@
 ﻿using Adapter;
 using Entitet;
+using Microsoft.Practices.Unity;
 using OpenTK;
 using Regel;
 using System;
@@ -8,6 +9,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Regel.Utgång;
+using Regel.Ingång;
+using OpenTK.Input;
+using Regel.Uppdatera;
+using Regel.Visa;
 
 namespace Konfiguration
 {
@@ -15,23 +21,20 @@ namespace Konfiguration
     {
         static void Main(string[] args)
         {
+            var objektbehållare = new UnityContainer();
+
             var openTKFönster = new GameWindow();
-            var grafik = new OpenGLGrafik();
-            var ritare = new Ritare(grafik);
-            var regelfabrik = new Regelfabrik
-            {
-                Spelvärld = SkapaSpelvärld(),
-                Ritare = ritare,
-                Spelarhandling = new Interaktionsadapter(openTKFönster.Keyboard)
-            };
+            objektbehållare.RegisterInstance(openTKFönster);
+            objektbehållare.RegisterInstance<IGrafik>(new OpenGLGrafik());
+            objektbehållare.RegisterType<IRitare, Ritare>();
+            objektbehållare.RegisterInstance(SkapaSpelvärld());
+            objektbehållare.RegisterInstance(openTKFönster.Keyboard);
+            objektbehållare.RegisterType<ISpelarhandling, Interaktionsadapter>();
+            objektbehållare.RegisterInstance(new Bitmap("c:/temp/tiles.png"));
+            objektbehållare.RegisterType<ITagTidssteg, TagTidssteg>();
+            objektbehållare.RegisterType<IVisaSpelet, VisaSpelet>();
 
-            var fönster = new Spelfönster(
-                openTKFönster,
-                grafik,
-                new Bitmap("c:/temp/tiles.png"), 
-                regelfabrik);
-
-            fönster.Öppna();
+            objektbehållare.Resolve<Spelfönster>().Öppna();
         }
 
         private static ISpelvärld SkapaSpelvärld()

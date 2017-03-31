@@ -40,14 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ingång\IRegelfabrik.cs" />
     <Compile Include="Ingång\ITagTidssteg.cs" />
     <Compile Include="Uppdatera\FlyttaSpelarobjekt.cs" />
     <Compile Include="Uppdatera\TagTidssteg.cs" />
     <Compile Include="Utgång\IRitare.cs" />
     <Compile Include="Ingång\IVisaSpelet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Regelfabrik.cs" />
     <Compile Include="UndantagFörSaknatKrav.cs" />
     <Compile Include="Utgång\ISpelarhandling.cs" />
     <Compile Include="Visa\VisaBilder.cs" />

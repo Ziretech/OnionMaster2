@@ -1,4 +1,8 @@
-﻿Bilder borde uppfylla kraven för att vara en entitet (?)
+﻿x Refaktorering: Adapter borde inte få söka efter regler. De ska få sina regler injicerade i konstruktorerna.
+x Refaktorering: Regler som behöver andra regler ska få sina regler injicerade i sin konstruktor.
+x Refaktorering: Konfigurationslagret (som ska hantera all injicering) kan få använda Unity eller liknande DI verktyg.
+
+Bilder borde uppfylla kraven för att vara en entitet (?)
 Bildruta borde ha egenskaperna visningstid, bildindex, position.
 Bildruta borde uppfylla kraven för att vara en entitet.
 Bildrutor borde ha 0 bildrutor när de är tomma.
@@ -19,10 +23,6 @@ Visning av animation med 2 bildrutor på 1 tick med start vid 1 borde visa bild 
 Visning av animation med 2 bildrutor på 1 tick med start vid 1 borde visa bild 2 vid 2
 Visning av animation med 2 bildrutor på 1 tick med start vid 1 borde visa bild 1 vid 3
 Visning av animation med 2 bildrutor på 2 tick med start vid 3 borde visa bild 1 vid 4
-
-Refaktorering: Adapter borde inte få söka efter regler. De ska få sina regler injicerade i konstruktorerna.
-Refaktorering: Regler som behöver andra regler ska få sina regler injicerade i sin konstruktor.
-Refaktorering: Konfigurationslagret (som ska hantera all injicering) kan få använda Unity eller liknande DI verktyg.
 
 Starta animation.
 Välja animation.

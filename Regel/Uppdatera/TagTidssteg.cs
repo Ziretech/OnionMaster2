@@ -13,17 +13,18 @@ namespace Regel.Uppdatera
     {
         private readonly ISpelarhandling _spelarhandling;
         private readonly ISpelvärld _spelvärld;
+        private readonly FlyttaSpelarobjekt _flyttaSpelarobjekt;
 
-        public TagTidssteg(ISpelarhandling spelarhandling, ISpelvärld spelvärld)
+        public TagTidssteg(ISpelarhandling spelarhandling, ISpelvärld spelvärld, FlyttaSpelarobjekt flyttaSpelarobjekt)
         {
             _spelarhandling = spelarhandling ?? throw new UndantagFörSaknatKrav("TagTidssteg måste skapas med spelarhandling.");
             _spelvärld = spelvärld ?? throw new UndantagFörSaknatKrav("TagTidssteg måste skapas med spelvärld.");
+            _flyttaSpelarobjekt = flyttaSpelarobjekt;
         }
 
         public void Tick()
         {
-            var flyttaSpelarobjekt = new FlyttaSpelarobjekt(_spelvärld, _spelarhandling);
-            flyttaSpelarobjekt.Flytta();
+            _flyttaSpelarobjekt.Flytta();
         }
     }
 }

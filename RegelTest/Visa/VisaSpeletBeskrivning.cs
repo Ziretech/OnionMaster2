@@ -63,7 +63,7 @@ namespace Regel.Visa
             try
             {
                 var ritareMock = new Mock<IRitare>();
-                VisaSpelet(ritareMock.Object, null);
+                VisaSpelet(ritareMock.Object, null, new VisaBilder(new Spelvärld()));
                 Assert.Fail("Inget undantag gjordes.");
             }
             catch (UndantagFörSaknatKrav undantag)
@@ -72,9 +72,9 @@ namespace Regel.Visa
             }
         }
 
-        private IVisaSpelet VisaSpelet(IRitare ritare, Spelvärld spelvärld)
+        private IVisaSpelet VisaSpelet(IRitare ritare, Spelvärld spelvärld, VisaBilder visaBilder = null)
         {
-            return new Regelfabrik { Spelvärld = spelvärld, Ritare = ritare }.SkapaVisaSpelet();
+            return new VisaSpelet(ritare, spelvärld, visaBilder ?? new VisaBilder(spelvärld));
         }
 
         private Spelvärld SkapaSpelvärld(params Objekt[] lista)
