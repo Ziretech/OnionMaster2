@@ -9,7 +9,7 @@ namespace Entitet
 {
     public abstract class EntitetsBeskrivning
     {
-        protected abstract Dictionary<string, object> Strängrepresentationer { get; }
+        protected abstract Dictionary<object, string> Strängrepresentationer { get; }
 
         protected abstract Dictionary<object, object> LikvärdigaEntiteter { get; }
 
@@ -20,7 +20,7 @@ namespace Entitet
         {
             foreach(var testfall in Strängrepresentationer)
             {
-                Assert.That(testfall.Value.ToString(), Is.EqualTo(testfall.Key), "Felaktig strängrepresentation för " + testfall.Value.GetType().ToString());
+                Assert.That(testfall.Key.ToString(), Is.EqualTo(testfall.Value), "Felaktig strängrepresentation för " + testfall.Key.GetType().ToString());
             }
         }
 

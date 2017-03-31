@@ -10,10 +10,10 @@ namespace Entitet
     [TestFixture]
     public class BildBeskrivning : EntitetsBeskrivning
     {
-        protected override Dictionary<string, object> Strängrepresentationer => new Dictionary<string, object>
+        protected override Dictionary<object, string> Strängrepresentationer => new Dictionary<object, string>
         {
-            { "[1,2 3x4]", new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4)) },
-            { "[2,3 4x5]", new Bild(new Bildmängdskoordinat(2, 3), new Bildstorlek(4, 5)) }
+            { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4)), "[1,2 3x4]" },
+            { new Bild(new Bildmängdskoordinat(2, 3), new Bildstorlek(4, 5)), "[2,3 4x5]" }
         };
 
         protected override Dictionary<object, object> LikvärdigaEntiteter => new Dictionary<object, object>

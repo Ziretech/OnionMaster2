@@ -1,4 +1,5 @@
-﻿Bilder borde hämta bild baserat på index.
+﻿x Växla ordning på Strängrepresentationer, det är möjligt att man vill att två olika objekt kan ge samma representation.
+Bilder borde hämta bild baserat på index.
 Skapa Bildruta.
 Skapa Bildrutor.
 Skapa Animation.
