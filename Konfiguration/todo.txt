@@ -1,9 +1,4 @@
-﻿x Refaktorering: Adapter borde inte få söka efter regler. De ska få sina regler injicerade i konstruktorerna.
-x Refaktorering: Regler som behöver andra regler ska få sina regler injicerade i sin konstruktor.
-x Refaktorering: Konfigurationslagret (som ska hantera all injicering) kan få använda Unity eller liknande DI verktyg.
-
-Bilder borde uppfylla kraven för att vara en entitet (?)
-Bildruta borde ha egenskaperna visningstid, bildindex, position.
+﻿Bildruta borde ha egenskaperna visningstid, bildindex, position.
 Bildruta borde uppfylla kraven för att vara en entitet.
 Bildrutor borde ha 0 bildrutor när de är tomma.
 Bildrutor borde ha 1 bildruta när har en bildruta.

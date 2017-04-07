@@ -26,5 +26,27 @@ namespace Entitet
         {
             return _bilder[v];
         }
+
+        public override int GetHashCode()
+        {
+            int code = 0;
+            foreach(var bild in _bilder)
+            {
+                code = code ^ bild.GetHashCode();
+            }
+            return code;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var bilder = (Bilder)obj;
+            var likvärdiga = bilder != null && bilder.Antal == Antal;
+
+            for(var i = 0; i < Antal && likvärdiga; i++)
+            {
+                likvärdiga = bilder.HämtaMedIndex(i).Equals(HämtaMedIndex(i));
+            }
+            return likvärdiga;
+        }
     }
 }

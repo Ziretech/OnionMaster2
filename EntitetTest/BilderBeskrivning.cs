@@ -8,8 +8,25 @@ using System.Threading.Tasks;
 namespace Entitet
 {
     [TestFixture]
-    public class BilderBeskrivning
+    public class BilderBeskrivning : EntitetsBeskrivning
     {
+        protected override Dictionary<object, string> Strängrepresentationer => new Dictionary<object, string> {
+            { new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4)) }), "Entitet.Bilder" }
+        };
+
+        protected override Dictionary<object, object> LikvärdigaEntiteter => new Dictionary<object, object>
+        {
+            { new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4))}), new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4))}) }
+        };
+
+        protected override Dictionary<object, object> InteLikvärdigaEntiteter => new Dictionary<object, object>
+        {
+            { new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(9, 2), new Bildstorlek(3, 4))}), new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4))}) },
+            { new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 9), new Bildstorlek(3, 4))}), new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4))}) },
+            { new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(9, 4))}), new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4))}) },
+            { new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 9))}), new Bilder(new List<Bild> { new Bild(new Bildmängdskoordinat(1, 2), new Bildstorlek(3, 4))}) }
+        };
+
         [Test]
         public void Bilder_borde_skapas_utan_några_bilder()
         {
