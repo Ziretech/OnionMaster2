@@ -33,5 +33,24 @@ namespace Entitet
             _y = y;
             _z = z;
         }
+
+        public override string ToString()
+        {
+            return $"{X},{Y},{Z}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            var position = (Position)obj;
+            return position != null &&
+                position.X == X &&
+                position.Y == Y &&
+                position.Z == Z;
+        }
+
+        public override int GetHashCode()
+        {
+            return X ^ Y ^ Z;
+        }
     }
 }
