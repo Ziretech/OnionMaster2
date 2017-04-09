@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entitet.Undantag;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Entitet
         {
             Visningstid = visningstid;
             Bildindex = bildindex;
-            Position = position;
+            Position = position ?? throw new UndantagFörSaknatKrav("Bildruta måste ha en position.");
         }
 
         public override string ToString()

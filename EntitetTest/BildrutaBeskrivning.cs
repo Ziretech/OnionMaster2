@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Entitet.Undantag;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,20 @@ namespace Entitet
         {
             var bildruta = new Bildruta(1, 2, new Position(3, 4, 5));
             Assert.That(bildruta.Position, Is.EqualTo(new Position(3, 4, 5)));
+        }
+
+        [Test]
+        public void Bildruta_borde_göra_undantag_från_att_skapas_utan_position()
+        {
+            try
+            {
+                new Bildruta(1, 2, null);
+                Assert.Fail("Inget undantag gjordes.");
+            }
+            catch(UndantagFörSaknatKrav undantag)
+            {
+                Assert.That(undantag.Message.ToLower(), Does.Contain("bildruta").And.Contain("position"));
+            }
         }
     }
 }

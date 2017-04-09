@@ -1,5 +1,4 @@
-﻿x Flytta UndantagFörSaknatKrav till Entitet-lagret.
-Bildruta borde göra undantag för att skapas utan position.
+﻿x Bildruta borde göra undantag för att skapas utan position.
 Bildrutor borde ha 0 bildrutor när de är tomma.
 Bildrutor borde ha 1 bildruta när har en bildruta.
 Bildrutor borde ha 2 bildrutor när de har två bildrutor.
