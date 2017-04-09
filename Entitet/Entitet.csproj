@@ -44,12 +44,14 @@
     <Compile Include="Bilder.cs" />
     <Compile Include="Bildmängdskoordinat.cs" />
     <Compile Include="Bildruta.cs" />
+    <Compile Include="Bildrutor.cs" />
     <Compile Include="Bildstorlek.cs" />
     <Compile Include="ISpelvärld.cs" />
     <Compile Include="Objekt.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spelvärld.cs" />
+    <Compile Include="TestFixtureAttribute.cs" />
     <Compile Include="Undantag\UndantagFörSaknatKrav.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
