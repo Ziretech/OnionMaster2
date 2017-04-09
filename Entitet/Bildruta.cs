@@ -18,5 +18,24 @@ namespace Entitet
             Bildindex = bildindex;
             Position = position;
         }
+
+        public override string ToString()
+        {
+            return $"{Bildindex}@{Visningstid} {Position.X},{Position.Y},{Position.Z}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            var bildruta = (Bildruta) obj;
+            return bildruta != null &&
+                bildruta.Visningstid == Visningstid &&
+                bildruta.Bildindex == Bildindex && 
+                Position.Equals(bildruta.Position);
+        }
+
+        public override int GetHashCode()
+        {
+            return Visningstid ^ Bildindex ^ Position.GetHashCode();
+        }
     }
 }
