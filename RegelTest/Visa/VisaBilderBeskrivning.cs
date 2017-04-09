@@ -1,4 +1,5 @@
 ﻿using Entitet;
+using Entitet.Undantag;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿x Bildruta borde uppfylla kraven för att vara en entitet.
+﻿x Flytta UndantagFörSaknatKrav till Entitet-lagret.
 Bildruta borde göra undantag för att skapas utan position.
 Bildrutor borde ha 0 bildrutor när de är tomma.
 Bildrutor borde ha 1 bildruta när har en bildruta.

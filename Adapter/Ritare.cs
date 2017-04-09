@@ -1,4 +1,5 @@
-﻿using Regel;
+﻿using Entitet.Undantag;
+using Regel;
 using Regel.Utgång;
 using System;
 using System.Collections.Generic;

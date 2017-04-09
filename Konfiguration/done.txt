@@ -21,3 +21,4 @@ x Refaktorering: Konfigurationslagret (som ska hantera all injicering) kan få a
 x Bilder borde uppfylla kraven för att vara en entitet (?)
 x Position borde uppfylla kraven för att vara en entitet.
 x Bildruta borde ha egenskaperna visningstid, bildindex, position.
+x Bildruta borde uppfylla kraven för att vara en entitet.

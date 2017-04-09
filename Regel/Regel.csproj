@@ -46,7 +46,6 @@
     <Compile Include="Utgång\IRitare.cs" />
     <Compile Include="Ingång\IVisaSpelet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UndantagFörSaknatKrav.cs" />
     <Compile Include="Utgång\ISpelarhandling.cs" />
     <Compile Include="Visa\VisaBilder.cs" />
     <Compile Include="Visa\VisaSpelet.cs" />

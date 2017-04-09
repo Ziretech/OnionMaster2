@@ -1,4 +1,5 @@
 ﻿using Entitet;
+using Entitet.Undantag;
 using Moq;
 using NUnit.Framework;
 using Regel.Ingång;

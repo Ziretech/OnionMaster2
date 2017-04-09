@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using Entitet.Undantag;
+using Moq;
 using NUnit.Framework;
 using Regel;
 using System;

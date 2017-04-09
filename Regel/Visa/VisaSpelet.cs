@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Entitet;
 using Regel.Ingång;
 using Regel.Utgång;
+using Entitet.Undantag;
 
 namespace Regel.Visa
 {

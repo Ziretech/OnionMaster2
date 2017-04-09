@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entitet;
+using Entitet.Undantag;
 
 namespace Regel.Visa
 {
