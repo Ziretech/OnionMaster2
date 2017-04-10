@@ -39,7 +39,7 @@ namespace Entitet
             var kod = 0;
             foreach(var bildruta in _bildrutor)
             {
-                kod += bildruta.GetHashCode();
+                kod = kod ^ bildruta.GetHashCode();
             }
             return kod;
         }

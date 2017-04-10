@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimationBeskrivning.cs" />
     <Compile Include="BildBeskrivning.cs" />
     <Compile Include="BilderBeskrivning.cs" />
     <Compile Include="BildrutaBeskrivning.cs" />

@@ -1,7 +1,7 @@
-﻿x Bildrutor borde göra undantag för att skapas utan lista med bildrutor.
-Animation borde uppfylla kraven för att vara en entitet.
-Animation borde ha en id.
-Animation borde ha bildrutor.
+﻿x Animation borde ha en id.
+x Animation borde ha bildrutor.
+x Animation borde uppfylla kraven för att vara en entitet.
+x Animation borde göra undantag för att skapas utan bildrutor.
 Animationer borde innehålla Animation-lista.
 AktivAnimation borde ha egenskaperna Animation (id), och starttid.
 Objekt med bilddefinitioner borde ha Bilddefinitioner.
