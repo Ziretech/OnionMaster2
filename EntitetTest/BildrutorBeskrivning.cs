@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Entitet.Undantag;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +57,20 @@ namespace Entitet
                 new Bildruta(11, 12, new Position(13, 14, 15))
             });
             Assert.That(bildrutor.Antal, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void Bildrutor_borde_göra_undantag_för_att_skapas_utan_lista_med_bildrutor()
+        {
+            try
+            {
+                new Bildrutor(null);
+                Assert.Fail("Inget undantag gjordes.");
+            }
+            catch(UndantagFörSaknatKrav undantag)
+            {
+                Assert.That(undantag.Message.ToLower(), Does.Contain("bildrutor").And.Contain("lista"));
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entitet.Undantag;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Entitet
 
         public Bildrutor(List<Bildruta> bildrutor)
         {
-            _bildrutor = bildrutor;
+            _bildrutor = bildrutor ?? throw new UndantagFörSaknatKrav("Bildrutor måste ha en lista med bildrutor.");
         }
 
         public int Antal

@@ -1,5 +1,4 @@
-﻿x Bildrutor borde uppfylla kraven för att vara en entitet.
-Bildrutor borde göra undantag för att skapas utan lista med bildrutor.
+﻿x Bildrutor borde göra undantag för att skapas utan lista med bildrutor.
 Animation borde uppfylla kraven för att vara en entitet.
 Animation borde ha en id.
 Animation borde ha bildrutor.
