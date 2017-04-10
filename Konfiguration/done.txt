@@ -24,3 +24,5 @@ x Bildruta borde ha egenskaperna visningstid, bildindex, position.
 x Bildruta borde uppfylla kraven för att vara en entitet.
 x Flytta UndantagFörSaknatKrav till Entitet-lagret.
 x Bildruta borde göra undantag för att skapas utan position.
+x Bildrutor borde ha 1 bildruta när har en bildruta.
+x Bildrutor borde ha 2 bildrutor när de har två bildrutor.
